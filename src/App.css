@@ -5,7 +5,7 @@
 .gif-item {
   box-sizing: border-box;
   display: inline-block;
-  column-count: 4;
+  column-count: 5;
   padding: 0 20px;
 }
 .gif-item li {
@@ -22,4 +22,24 @@ input {
   font-size: 22px;
   line-height: 25px;
   border: 1px solid #CCC;
+}
+@media only screen and (min-width: 320px) {
+  .gif-item {
+    column-count: 1;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .gif-item {
+    column-count: 2;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .gif-item {
+    column-count: 3;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .gif-item {
+    column-count: 4;
+  }
 }

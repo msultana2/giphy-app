@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://msultana2.github.io/giphy-app/",
   "dependencies": {
+    "ajv": "^6.5.3",
     "axios": "^0.18.0",
     "giffer": "^2.0.16",
     "react": "^16.3.2",

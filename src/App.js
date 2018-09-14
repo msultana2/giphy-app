@@ -4,8 +4,6 @@ import './App.css';
 import SearchBar from './SearchBar';
 import GifList from './GifList';
 
-import request from 'superagent';
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -15,12 +13,14 @@ class App extends Component {
   }
   handleInputChange = (term) => {
     const url = `http://api.giphy.com/v1/gifs/search?q=${term.replace(/\s/g, '+')}&api_key=dc6zaTOxFJmzC`;
-    request.get(url, (err, res) => {
-      console.log(res.body.data[0]);
-      this.setState({
-        gifs: res.body.data
+    
+    fetch(url)
+      .then(response => response.json())
+      .then(res => {
+        console.log(res);
+        this.setState({ gifs: res.data })
       })
-    });
+      .catch(e => console.log('error', e));
   }
   render() {
     return (
