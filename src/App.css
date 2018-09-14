@@ -1,0 +1,25 @@
+.App {
+  margin: 0 auto;
+  text-align: center;
+}
+.gif-item {
+  box-sizing: border-box;
+  display: inline-block;
+  column-count: 4;
+  padding: 0 20px;
+}
+.gif-item li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.gif-item img {
+  width: 100%;
+}
+input {
+  width: 50%;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 22px;
+  line-height: 25px;
+  border: 1px solid #CCC;
+}
